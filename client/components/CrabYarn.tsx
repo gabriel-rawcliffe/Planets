@@ -1,3 +1,3 @@
 export default function CrabYarn() {
-  return <>Crabs</>
+  return <>Crabs: a yarn</>
 }
