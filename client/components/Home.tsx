@@ -1,3 +1,4 @@
+import PlanetEarth from './PlanetEarth'
 import CrabYarn from './CrabYarn'
 import Form from './Form'
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <CrabYarn />
       <Form />
+      <PlanetEarth />
     </>
   )
 }
