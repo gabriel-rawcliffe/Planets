@@ -1,4 +1,3 @@
-import PlanetEarth from './PlanetEarth'
 import CrabYarn from './CrabYarn'
 import Form from './Form'
 import { useState } from 'react'
