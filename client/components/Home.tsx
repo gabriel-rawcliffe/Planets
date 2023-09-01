@@ -3,6 +3,7 @@ import CrabYarn from './CrabYarn'
 import Form from './Form'
 import { useState } from 'react'
 import PlanetOther from './PlanetOther'
+import PlanetEarth from './PlanetEarth'
 
 export default function Home() {
   const [selectedPlanet, setSelectedPlanet] = useState('')
@@ -20,7 +21,7 @@ export default function Home() {
         handleSelectChange={handleSelectChange}
       />
       <PlanetEarth />
-      <PlanetOther />
+      <PlanetOther name={selectedPlanet} />
     </>
   )
 }
