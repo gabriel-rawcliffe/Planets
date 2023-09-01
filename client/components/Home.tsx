@@ -19,7 +19,7 @@ export default function Home() {
         handleSelectChange={handleSelectChange}
       />
       <PlanetEarth />
-      <PlanetOther name={selectedPlanet} />
+      <PlanetOther />
     </>
   )
 }

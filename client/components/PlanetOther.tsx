@@ -6,7 +6,7 @@ import { Planet } from '../../models/planets'
 
 export default function PlanetOther() {
   // const { name } = useParams<Params>()
-  const name = 'Neptune'
+  const name = 'Jupiter'
   const {
     data: otherPlanet,
     isLoading,
