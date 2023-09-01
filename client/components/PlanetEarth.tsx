@@ -19,7 +19,7 @@ export default function PlanetEarth() {
   return (
     <>
       <h1>Planet Earth</h1>
-      {data.name && <img src="/images/earth.png" alt="Planet Earth" />}
+      <img src="client/public/images/earth.png" alt="Planet Earth" />
     </>
   )
 }
