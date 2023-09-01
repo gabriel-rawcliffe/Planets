@@ -1,17 +1,28 @@
-import { Params, useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 
 import { getPlanet } from '../apis/apiClient'
 import { Planet } from '../../models/planets'
+import * as utils from '../helpers.ts'
 
-export default function PlanetOther() {
-  // const { name } = useParams<Params>()
-  const name = 'Neptune'
+interface Props {
+  name: string
+}
+
+export default function PlanetOther(props: Props) {
+  // const name = 'Neptune'
   const {
     data: otherPlanet,
     isLoading,
     error,
-  } = useQuery(['planet', name], () => getPlanet(name))
+  } = useQuery(['planet', props.name], () => getPlanet(props.name))
+  const crab = {
+    id: 1,
+    species: 'king',
+    mass: 3,
+    length: 2,
+    lifetime: 5,
+    description: 'I am a King',
+  }
 
   console.log(otherPlanet)
 
@@ -21,17 +32,24 @@ export default function PlanetOther() {
 
   return (
     <>
-      <h2>{name}</h2>
+      <h2>{props.name}</h2>
       <img src="#" alt="other-planet" />
       <ul>
         {otherPlanet?.map((planet: Planet) => (
-          <li key={planet.name}>Mass - {planet.mass}</li>
+          // <li key={planet.name}>Mass - {planet.mass}</li>
+          <li key={planet.name}>
+            Mass - {utils.planetMassInCrabs(otherPlanet[0], crab)}
+          </li>
         ))}
         {otherPlanet?.map((planet: Planet) => (
-          <li key={planet.name}>Period - {planet.period}</li>
+          <li key={planet.name}>
+            Period - {utils.oritalPeriodInCrabs(otherPlanet[0], crab)}
+          </li>
         ))}
         {otherPlanet?.map((planet: Planet) => (
-          <li key={planet.name}>Distance - {planet.distance_light_year}</li>
+          <li key={planet.name}>
+            Distance - {utils.distanceInCrabs(otherPlanet[0], crab)}
+          </li>
         ))}
       </ul>
     </>

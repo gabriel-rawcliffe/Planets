@@ -9,11 +9,14 @@ export function distanceInCrabs(planet: Planet, crab: Crab) {
   return crabDistance.toExponential()
 }
 
-export function planetMassInCrabs(planet: Planet, crab: Crab) {
+export function planetMassInCrabs(planet: Planet, crab: Crab): string {
   // mass is returned as a proportion of Jupiters mass, so convert mass into kg
   //convert into crabs
+  console.log(planet.mass)
+  console.log(crab.mass)
   const crabMass: number =
     (planet.mass * (1.899 * Math.pow(10, 27))) / crab.mass
+  console.log(crabMass)
   return crabMass.toExponential()
 }
 
