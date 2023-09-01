@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import { getPlanet } from '../apis/apiClient'
 
 export default function PlanetEarth() {
-  const { data, isLoading, isError } = useQuery(['getPlanet'], () =>
-    getPlanet('')
+  const name = 'Earth'
+  const { data, isLoading, isError } = useQuery(['Earth'], () =>
+    getPlanet(name)
   )
   console.log(getPlanet)
 
@@ -18,7 +19,7 @@ export default function PlanetEarth() {
   return (
     <>
       <h1>Planet Earth</h1>
-      {data && <img src={data.imageUrl} alt="Planet Earth" />}
+      {data.name && <img src="/images/earth.png" alt="Planet Earth" />}
     </>
   )
 }
