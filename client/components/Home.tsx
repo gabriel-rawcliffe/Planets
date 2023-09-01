@@ -1,3 +1,4 @@
+import Tagline from './Tagline'
 import CrabYarn from './CrabYarn'
 import Form from './Form'
 import { useState } from 'react'
@@ -12,6 +13,7 @@ export default function Home() {
 
   return (
     <>
+      <Tagline />
       <CrabYarn />
       <Form
         selectedPlanet={selectedPlanet}
