@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 
-export default function Form() {
+export default function Form({ selectedPlanet, handleSelectChange }) {
   const {
     data: planets,
     error,
@@ -20,12 +20,6 @@ export default function Form() {
     return planets
   })
 
-  const [selectedPlanet, setSelectedPlanet] = useState('')
-
-  const handleSelectChange = (event) => {
-    setSelectedPlanet(event.target.value)
-  }
-
   if (error) {
     return `Could not load details for ${name}`
   }
@@ -37,7 +31,12 @@ export default function Form() {
   return (
     <form>
       <label>
-        <select value={selectedPlanet} onChange={handleSelectChange}>
+        <select
+          value={selectedPlanet}
+          onChange={(e) => {
+            handleSelectChange(e)
+          }}
+        >
           {planets?.map((planet) => (
             <option key={planet} value={planet}>
               {planet}
