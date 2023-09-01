@@ -5,11 +5,37 @@ body {
   margin: 0;
   padding: 20px;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* The background image */
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.001),
+      rgba(255, 255, 255, 0.002),
+      rgba(255, 255, 255, 0.003),
+      rgba(255, 255, 255, 0.004),
+      rgba(255, 255, 255, 0.005),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 255, 255, 0.99),
+      rgba(255, 255, 255, 1)
+    ),
+    url('../public/images/StarsWP.jpg');
+
+  /* Make sure the background covers the entire body */
+  background-size: cover;
+
+  /* Set background to not repeat */
+  background-repeat: no-repeat;
+
+  /* Set background to be fixed */
+  background-attachment: scroll;
 }
 
 #header {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 #tagline {
@@ -33,6 +59,7 @@ body {
 
 #crabyarn {
   margin-bottom: 16px;
+  color: azure;
   width: 66.66%; /* 2/3 of the parent width */
   margin: auto; /* center the element horizontally */
   font-size: 24px; /* larger text */
