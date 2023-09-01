@@ -33,22 +33,24 @@ export default function PlanetOther(props: Props) {
   return (
     <>
       <h2>{props.name}</h2>
-      <img src="#" alt="other-planet" />
+      <img
+        src={`client/public/images/${props.name.toLowerCase()}.png`}
+        alt={`${props.name.toLowerCase()}`}
+      />
       <ul>
         {otherPlanet?.map((planet: Planet) => (
-          // <li key={planet.name}>Mass - {planet.mass}</li>
           <li key={planet.name}>
-            Mass - {utils.planetMassInCrabs(otherPlanet[0], crab)}
+            Mass - {utils.planetMassInCrabs(otherPlanet[0], crab)} cgs
           </li>
         ))}
         {otherPlanet?.map((planet: Planet) => (
           <li key={planet.name}>
-            Period - {utils.oritalPeriodInCrabs(otherPlanet[0], crab)}
+            Period - {utils.oritalPeriodInCrabs(otherPlanet[0], crab)} cys
           </li>
         ))}
         {otherPlanet?.map((planet: Planet) => (
           <li key={planet.name}>
-            Distance - {utils.distanceInCrabs(otherPlanet[0], crab)}
+            Distance - {utils.distanceInCrabs(otherPlanet[0], crab)} cmm
           </li>
         ))}
       </ul>
