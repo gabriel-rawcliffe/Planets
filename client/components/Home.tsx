@@ -6,7 +6,7 @@ import PlanetOther from './PlanetOther'
 import PlanetEarth from './PlanetEarth'
 
 export default function Home() {
-  const [selectedPlanet, setSelectedPlanet] = useState('')
+  const [selectedPlanet, setSelectedPlanet] = useState('Mercury')
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedPlanet(event.target.value)
@@ -20,8 +20,10 @@ export default function Home() {
         selectedPlanet={selectedPlanet}
         handleSelectChange={handleSelectChange}
       />
-      <PlanetEarth />
-      <PlanetOther name={selectedPlanet} />
+      <div className="planets">
+        <PlanetEarth />
+        <PlanetOther name={selectedPlanet} />
+      </div>
     </>
   )
 }

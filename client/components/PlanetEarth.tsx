@@ -18,8 +18,10 @@ export default function PlanetEarth() {
 
   return (
     <>
-      <h1>Planet Earth</h1>
-      <img src="client/public/images/earth.png" alt="Planet Earth" />
+      <div className="planet">
+        <h1>Planet Earth</h1>
+        <img src="client/public/images/earth.png" alt="Planet Earth" />
+      </div>
     </>
   )
 }

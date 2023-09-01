@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
+import { getCrabs } from '../apis/apiClient'
 
 export default function Form({ selectedPlanet, handleSelectChange }) {
+  // const crabs = await getCrabs()
+  // console.log(`crabs: ${crabs}`)
   const {
     data: planets,
     error,
@@ -21,7 +24,7 @@ export default function Form({ selectedPlanet, handleSelectChange }) {
   })
 
   if (error) {
-    return `Could not load details for ${name}`
+    return `Could not load planet`
   }
 
   if (isLoading) {

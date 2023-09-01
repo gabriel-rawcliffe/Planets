@@ -32,28 +32,34 @@ export default function PlanetOther(props: Props) {
 
   return (
     <>
-      <h2>{props.name}</h2>
-      <img
-        src={`client/public/images/${props.name.toLowerCase()}.png`}
-        alt={`${props.name.toLowerCase()}`}
-      />
-      <ul>
-        {otherPlanet?.map((planet: Planet) => (
-          <li key={planet.name}>
-            Mass - {utils.planetMassInCrabs(otherPlanet[0], crab)} cgs
-          </li>
-        ))}
-        {otherPlanet?.map((planet: Planet) => (
-          <li key={planet.name}>
-            Period - {utils.oritalPeriodInCrabs(otherPlanet[0], crab)} cys
-          </li>
-        ))}
-        {otherPlanet?.map((planet: Planet) => (
-          <li key={planet.name}>
-            Distance - {utils.distanceInCrabs(otherPlanet[0], crab)} cmm
-          </li>
-        ))}
-      </ul>
+      <div className="planet">
+        <h1>{props.name}</h1>
+        <img
+          src={`client/public/images/${props.name.toLowerCase()}.png`}
+          alt={`${props.name.toLowerCase()}`}
+        />
+        <ul>
+          {otherPlanet?.map((planet: Planet) => (
+            <li key={planet.name}>
+              Mass - {utils.planetMassInCrabs(otherPlanet[0], crab)} crab
+              equivalents
+            </li>
+          ))}
+          {otherPlanet?.map((planet: Planet) => (
+            <li key={planet.name}>
+              Period - {utils.oritalPeriodInCrabs(otherPlanet[0], crab)} crab
+              lives
+            </li>
+          ))}
+          {otherPlanet?.map((planet: Planet) => (
+            <li key={planet.name}>
+              Distance - {utils.distanceInCrabs(otherPlanet[0], crab)} crab
+              lengths
+            </li>
+          ))}
+          <li>Contains crabs? - YES!!</li>
+        </ul>
+      </div>
     </>
   )
 }

@@ -6,4 +6,10 @@ export async function getPlanet(planet: string) {
   return response.body
 }
 
+export async function getCrabs() {
+  const response = await request.get(`/api/v1/crabs/`)
+
+  return response.body
+}
+
 // TODO: grab crabs from db
