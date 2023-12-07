@@ -80,8 +80,17 @@ body {
 
 .planet {
   justify-content: center;
+  font-size: 2rem;
 }
 
-label {
-  height: 100px;
+select {
+  padding: 10px;
+  font-size: 1.5rem;
+  background: rgb(148, 193, 192);
+  border-radius: 15%;
+}
+
+select:hover {
+  background: black;
+  color: azure;
 }
