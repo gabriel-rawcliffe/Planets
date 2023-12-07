@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { getCrabs } from '../apis/apiClient'
 
-export default function Form() {
+export default function CrabForm() {
   // const crabs = await getCrabs()
   // console.log(`crabs: ${crabs}`)
   const [crab, setCrab] = useState('King Crab')
