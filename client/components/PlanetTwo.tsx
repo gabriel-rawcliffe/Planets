@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 
-import { getPlanet } from '../apis/apiClient'
-import { Planet } from '../../models/planets'
+import { getPlanet } from '../apis/apiClient.ts'
+import { Planet } from '../../models/planets.ts'
 import * as utils from '../helpers.ts'
 
 interface Props {

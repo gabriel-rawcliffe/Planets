@@ -59,7 +59,7 @@ body {
 
 #page-intro {
   margin-bottom: 16px;
-  color: azure;
+  color: black;
   width: 66.66%; /* 2/3 of the parent width */
   margin: auto; /* center the element horizontally */
   font-size: 24px; /* larger text */
@@ -69,7 +69,7 @@ body {
   flex-direction: column; /* stack children vertically */
   justify-content: center; /* center children vertically */
   align-items: center; /* center children horizontally */
-  min-height: 100vh; /* take up at least the full viewport height */
+  /* min-height: 100vh; take up at least the full viewport height */
   font-size: 2rem;
 }
 .planets {

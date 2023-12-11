@@ -1,9 +1,8 @@
-import Tagline from './Tagline'
 import PageIntro from './PageIntro'
 import Form from './Form'
 import { useState } from 'react'
-import PlanetOther from './PlanetOther'
-import PlanetEarth from './PlanetEarth'
+import PlanetTwo from './PlanetTwo'
+import PlanetOne from './PlanetOne'
 
 export default function Home() {
   const [selectedPlanet, setSelectedPlanet] = useState('Mercury')
@@ -14,7 +13,6 @@ export default function Home() {
 
   return (
     <>
-      <Tagline />
       <PageIntro />
       <Form
         selectedPlanet={selectedPlanet}
@@ -22,8 +20,8 @@ export default function Home() {
       />
 
       <div className="planets">
-        <PlanetEarth />
-        <PlanetOther name={selectedPlanet} />
+        <PlanetOne />
+        <PlanetTwo name={selectedPlanet} />
       </div>
     </>
   )

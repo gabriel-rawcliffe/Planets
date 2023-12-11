@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <div id="header">
-      <img src="client/public/images/OnlyCrabs.png" alt="Header" />
+      <h1>Planets</h1>
     </div>
   )
 }
