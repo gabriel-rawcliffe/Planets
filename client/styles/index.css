@@ -57,7 +57,7 @@ body {
   display: block; /* makes the image a block element */
 }
 
-#crabyarn {
+#page-intro {
   margin-bottom: 16px;
   color: azure;
   width: 66.66%; /* 2/3 of the parent width */
